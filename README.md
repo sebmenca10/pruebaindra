@@ -111,11 +111,11 @@ Crear un Producto
    -URL: http://localhost:8080/api/products
    -Cuerpo (JSON):
    
-    ```sql
        {
        "name": "Producto Ejemplo",
        "price": 5500
        }
+       
 Obtener todos los Productos
    -Método: GET
    -URL: http://localhost:8080/api/products
@@ -124,10 +124,10 @@ Crear un Carrito
    -URL: http://localhost:8080/api/carts
    -Cuerpo (JSON):
    
-    ```sql
        {
        "userId": 1
        }
+       
 Agregar un Producto al Carrito
    -Método: POST
    -URL: http://localhost:8080/api/cart-items/{cartId}/{productId}
