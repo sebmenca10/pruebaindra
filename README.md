@@ -95,7 +95,43 @@ Este proyecto es una API de carrito de compras construida con **Spring Boot**, *
 
 La documentación de Swagger está disponible una vez que la aplicación esté en ejecución. Puedes acceder a la documentación en la siguiente URL:
 - **Swagger UI:** http://localhost:8080/swagger-ui/index.html
-- Se añadio la colección de igual manera.
+
+**Pruebas en Postman**
+
+-URL Base: http://localhost:8080
+-Endpoints disponibles:
+   -Productos: /api/products
+   -Carritos: /api/carts
+   -Productos en el carrito: /api/cart-items
+   -Cupones: /api/coupons
+   
+**Ejemplos de Peticiones**
+Crear un Producto
+   -Método: POST
+   -URL: http://localhost:8080/api/products
+   -Cuerpo (JSON):
+   
+    ```sql
+       {
+       "name": "Producto Ejemplo",
+       "price": 5500
+       }
+Obtener todos los Productos
+   -Método: GET
+   -URL: http://localhost:8080/api/products
+Crear un Carrito
+   -Método: POST
+   -URL: http://localhost:8080/api/carts
+   -Cuerpo (JSON):
+   
+    ```sql
+       {
+       "userId": 1
+       }
+Agregar un Producto al Carrito
+   -Método: POST
+   -URL: http://localhost:8080/api/cart-items/{cartId}/{productId}
+   -Parámetro de Query: quantity (ej. ?quantity=3)
 
 ## Ejecutar Pruebas Unitarias
 
